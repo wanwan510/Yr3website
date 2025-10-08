@@ -17,7 +17,11 @@ a:hover {
 }
 
 .navbar .nav-link:hover {
-  background-color: #0090d0;
+  background-color: #52a5c9;
+  border-radius: 5px;
+}
+.navbar .nav-link.active {
+  background-color: #007bff;
   border-radius: 5px;
 }
 section {
