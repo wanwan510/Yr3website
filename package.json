@@ -1,0 +1,21 @@
+{
+  "name": "yr3website",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "main":"server.js",
+
+  "script":{
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
