@@ -8,14 +8,12 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "main":"server.js",
-
-  "script":{
+  "script": {
     "test": "node server.js",
     "start": "node server.js"
   },
-
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "nedb-promises": "^6.2.3"
   }
 }
