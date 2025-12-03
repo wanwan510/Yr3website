@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+</head>
+<style>
+    body{
+        margin: 0;
+        
+    }
+
+    header{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    header img{
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+    
+    }
+</style>
+<body>
+    <header>
+        <img id="bg" src="img/bg.jpg" alt="" srcset="">
+        <h2 id="title">Mountains</h2>
+        <img id="man" src="img/man.png" alt="" srcset="">
+        <img  id="Rcloud" src="img/clouds_1.png" alt="" srcset="">
+        <img  id="Lcloud" src="img/clouds_2.png" alt="" srcset="">
+        <img  id="Lmountain" src="img/mountain_left.png" alt="" srcset="">
+        <img  id="Rmountain" src="img/mountain_right.png" alt="" srcset="">
+       
+    </header>
+</body>
+<script>
+    gsap.to("#bg", {scale:2,duration:3});
+    gsap.to("#man", {scale:0.5,duration:3});
+    gsap.to("#Rcloud", {x:200,duration:3});
+    gsap.to("#Lcloud", {x:-200,duration:3});
+    gsap.to("#L", {x:-200,duration:3});
+    gsap.to("#Lcloud", {x:-200,duration:3});
+
+
+
+</script>
+</html>
