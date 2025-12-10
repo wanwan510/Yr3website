@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOADING</title>
+    <style>
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        :root {
+            --stage-1: 25%;
+            --stage-2: 50%;
+            --stage-3: 75%;
+            --stage-4: 100%;
+            --progbar-bg: lightgray;
+            --stage-1-bg: red;
+            --stage-2-bg: orange;
+            --stage-3-bg: greenyellow;
+            --stage-4-bg: green;
+        }
+
+        .container {
+            margin: 6em auto;
+            width: 40%;
+        }
+
+        .progress-bar {
+            height: 40px;
+            background: var(--progbar-bg);
+            border-radius: 30px;
+        }
+
+        .prog-status {
+            height: 40px;
+            width: 10%;
+            border-radius: 20px;
+            background: red;
+            animation: 6s linear load infinite;
+        }
+
+        @keyframes load {
+            50% {
+                width: 50%;
+                background: blue;
+            }
+
+            100% {
+                width: 100%;
+                background: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay src="assets/loading.mp4" width="1020"></video>
+
+    <div class="container">
+        <div class='progress-bar'>
+            <div class='prog-status'></div>
+                    onComplete: () => {
+            window.location.href = "index.html";
+        }
+        </div>
+    </div>
+</body>
+
+<!-- <script>
+    gsap.to(".progress-bar",{
+        width:"100%",
+        duration:7,
+        onComplete: () => {
+            window.location.href = "index.html";
+        }
+    });
+</script> -->
+<!-- rgb a=transparent -->
+
+</html>

@@ -1,0 +1,209 @@
+:root{
+      --purple-main: #7c5cff;
+      --purple-dark: #1e2140;
+      --purple-light: #c893ff;
+      --bg-dark: #15172e;
+      --white: #ffffff;
+}      
+
+
+body{
+    margin: 0%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    background: linear-gradient(to bottom, #2b214a, #7c5cff);
+    color: #fff;
+    overflow-x: hidden;
+}    
+
+.top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background: #7f63e6;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ffefff, #c893ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #fff;
+      margin-right: 12px;
+    }
+
+    .nav-title {
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .nav-menu-icon {
+      width: 24px;
+      cursor: pointer;
+    }
+
+    .nav-menu-icon span {
+      display: block;
+      height: 3px;
+      margin: 4px 0;
+      background: #ffffff;
+      border-radius: 2px;
+    }
+
+    /* 主視覺區 (有視差背景) */
+    .hero-section {
+      position: relative;
+      padding-top: 56px; /* 避免被 fixed nav 蓋住 */
+      height: 320px;
+      overflow: hidden;
+      background: #15172e;
+    }
+
+    /* 視差背景層 */
+    .parallax-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 0, #ffbee8, transparent 60%),
+        radial-gradient(circle at 90% 30%, #c893ff, transparent 60%);
+      transform: translateY(0);
+      transition: transform 0.05s linear;
+      z-index: 0;
+    }
+
+    /* 白色幾何區塊容器 */
+    .hero-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      z-index: 1;
+      background: #15172e;
+    }
+
+    .shape-row {
+      display: flex;
+      width: 100%;
+      gap: 16px;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .shape {
+      position: relative;
+      background: #ffffff;
+      color: #000;
+      min-height: 120px;
+      flex: 0 0 26%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 600;
+      overflow: hidden;
+    }
+
+    /* 依據畫面示意，做成兩個梯形 + 一個三角形 */
+    .shape-left {
+      clip-path: polygon(0 100%, 70% 0, 100% 0, 100% 100%);
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-left: 16px;
+      padding-top: 16px;
+    }
+
+    .shape-middle {
+      clip-path: polygon(0 100%, 15% 0, 100% 0, 85% 100%);
+    }
+
+    .shape-right {
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+      justify-content: center;
+    }
+
+    .shape-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 下方圓形/膠囊按鈕區 */
+    .control-bar {
+      position: relative;
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #7c5cff;
+      color: #fff;
+      font-size: 24px;
+      line-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-pill {
+      min-width: 90px;
+      height: 38px;
+      border-radius: 999px;
+      border: none;
+      background: #ffffff;
+      color: #333;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+      font-size: 14px;
+    }
+
+    .btn-pill-gradient {
+      background: linear-gradient(90deg, #ffffff, #c893ff);
+    }
+
+    /* 下面再放一個內容區做滾動測試 */
+    .content-section {
+      padding: 32px 16px 80px;
+      background: #2b214a;
+    }
+
+    .content-section h2 {
+      margin-bottom: 16px;
+    }
+
+    .card-dark {
+      background: #1f2038;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (max-width: 576px) {
+      .shape-row {
+        gap: 8px;
+      }
+      .shape {
+        min-height: 100px;
+        flex-basis: 30%;
+      }
+      .hero-section {
+        height: 280px;
+      }
+    }
+
+
