@@ -78,3 +78,38 @@ a:hover {
   visibility: hidden;
   position: absolute;
 }
+
+.submit-btn {
+  /* 基礎樣式：使用你的淺灰色與深藍背景 */
+  background-color: transparent;
+  color: #E5E5E5; 
+  border: 2px solid #E5E5E5;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* 讓縮放更順滑 */
+  outline: none;
+}
+
+.submit-btn:hover {
+  /* 1. 顏色切換：邊框與文字變亮紫色 */
+  border-color: #A855F7;
+  color: #A855F7;
+
+  /* 2. 磁吸縮放：輕微放大 */
+  transform: scale(1.05);
+
+  /* 3. 磁吸發光：亮紫色的陰影擴散 */
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6), 
+              0 0 40px rgba(168, 85, 247, 0.2);
+  
+  /* 4. 字體稍微加亮 */
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.5);
+}
+
+.submit-btn:active {
+  /* 點擊時輕微縮小，增加反饋感 */
+  transform: scale(0.98);
+}
+
